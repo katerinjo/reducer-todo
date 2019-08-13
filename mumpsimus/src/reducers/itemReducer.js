@@ -19,9 +19,13 @@ export const reduce = (state, action) => {
         ]
       };
     case 'TOGGLE':
-      const updatedList = state.list.map(todo => (
-        {...todo, completed: !todo.completed}
-      ));
+      const updatedList = state.list.map(todo => {
+        if (todo.id === action.id) {
+          return {...todo, completed: !todo.completed};
+        } else {
+          return todo;
+        }
+      });
       return {
         ...state,
         list: updatedList

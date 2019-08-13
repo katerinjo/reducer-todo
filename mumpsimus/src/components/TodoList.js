@@ -9,7 +9,7 @@ class TodoList extends React.Component {
     return (
       <ul>
         {this.props.list.map(todo => (
-          <li onClick={() => this.props.doFun(todo)}>
+          <li onClick={() => this.props.doFun(todo.id)}>
             {todo.item + (todo.completed ? '\u2713' : '')}
           </li>
         ))}

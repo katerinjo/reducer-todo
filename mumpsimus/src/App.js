@@ -13,10 +13,10 @@ function App() {
       <h2>Welcome to your Todo App!</h2>
       <TodoList
         list={state.list}
-        doFun={todo => dispatch({type: 'TOGGLE', todo})}
+        doFun={id => dispatch({type: 'TOGGLE', id})}
       />
       <TodoForm subFun={item => dispatch({type: 'ADD', item})}/>
-      <button>clear</button>
+      <button onClick={() => dispatch({type: 'CLEAR'})}>clear</button>
     </div>
   );
 }
