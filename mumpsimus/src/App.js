@@ -15,7 +15,7 @@ function App() {
         list={state.list}
         doFun={todo => dispatch({type: 'TOGGLE', todo})}
       />
-      <TodoForm subFun={todo => dispatch({type: 'ADD', todo})}/>
+      <TodoForm subFun={item => dispatch({type: 'ADD', item})}/>
       <button>clear</button>
     </div>
   );

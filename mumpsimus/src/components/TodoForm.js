@@ -22,6 +22,7 @@ export default withFormik({
   },
 
   handleSubmit(vals, { resetForm }) {
+    console.log(vals)
     vals.subFun(vals.item);
     resetForm();
   }
