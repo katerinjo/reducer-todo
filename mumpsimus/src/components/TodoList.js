@@ -5,8 +5,9 @@ import React from 'react';
 import Todo from './Todo';
 
 class TodoList extends React.Component {
-  constructor() {
+  constructor(props) {
     super();
+    console.log('props passed to list', props)
   }
 
   render() {
@@ -14,7 +15,7 @@ class TodoList extends React.Component {
       <ul>
         {this.props.list.map(todo => (
           <li onClick={() => this.props.doFun(todo)}>
-            {todo.item + (todo.completed ? '&check;' : '')}
+            {todo.item + (todo.completed ? '\u2713' : '')}
           </li>
         ))}
       </ul>
