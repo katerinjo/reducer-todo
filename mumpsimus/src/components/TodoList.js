@@ -12,8 +12,10 @@ class TodoList extends React.Component {
   render() {
     return (
       <ul>
-        {this.props.todos.map(todo => (
-          <Todo todo={todo} updateFun={this.props.updateFun} />
+        {this.props.list.map(todo => (
+          <li onClick={() => this.props.doFun(todo)}>
+            {todo.item + (todo.completed ? '&check;' : '')}
+          </li>
         ))}
       </ul>
     );

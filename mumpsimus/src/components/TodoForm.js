@@ -22,7 +22,7 @@ export default withFormik({
   },
 
   handleSubmit(vals, { resetForm }) {
-    subFun(vals.item);
+    vals.subFun(vals.item);
     resetForm();
   }
 })(Basic);
